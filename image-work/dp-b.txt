@@ -1,0 +1,6 @@
+create vdisk file="C:\woa-temp\win.vhd" type=expandable maximum=16000
+select vdisk file="C:\woa-temp\win.vhd"
+attach vdisk
+create partition primary
+format fs=ntfs label=WIN quick
+assign letter=W

@@ -1,0 +1,1 @@
+create vdisk file="E:\VIBECODING\windroid10\woa-port-smt500\image-work\output\win.vhd" type=fixed maximum=23976

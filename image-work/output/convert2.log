@@ -1,0 +1,14 @@
+== export imagem 3 (Pro ARM64) com refs dos UUPs
+[ERROR] Can't open "/professional_pt-br.esd" read-only: No such file or directory
+ERROR: Exiting with error code 47:
+       Failed to open a file.
+== export winre (imagem 2)
+ERROR: Exiting with error code 47:
+       Failed to open a file.
+== injeta winre + unattend no install.wim
+ERROR: --command may only be specified one time.  Please provide
+       the update commands on standard input instead.
+== VERIFY COMPLETO
+ERROR: Exiting with error code 47:
+       Failed to open a file.
+PIPELINE-OK

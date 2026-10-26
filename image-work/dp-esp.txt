@@ -1,0 +1,5 @@
+create vdisk file="E:\VIBECODING\windroid10\woa-port-smt500\image-work\output\esp.vhd" type=fixed maximum=600
+attach vdisk
+create partition primary
+format fs=fat32 label=ESP quick
+assign letter=S

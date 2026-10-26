@@ -1,0 +1,4 @@
+select vdisk file="E:\VIBECODING\windroid10\woa-port-smt500\image-work\output\win.vhd"
+detach vdisk
+select vdisk file="E:\VIBECODING\windroid10\woa-port-smt500\image-work\output\esp.vhd"
+detach vdisk

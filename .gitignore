@@ -1,0 +1,16 @@
+# artefatos grandes recriáveis
+image-work/uup/
+*.iso
+*.vhdx
+device/dumps/*.img
+uefi/boot-*-backup.img
+# grandes binarios (recriaveis ou backups locais)
+image-work/output/*.vhd
+device/dumps/backup-critical/
+device/dumps/*.img
+device/firmware/*.img
+uefi/boot-*.img
+# binarios pesados restantes
+device/firmware/modem.bin
+device/dumps/logfs.bin
+uefi/UEFI-Images.zip

@@ -1,0 +1,33 @@
+[ERROR] "/Windows/WinSxS/arm64_microsoft-windows-t..es-inputredirection_31bf3856ad364e35_10.0.22621.1_none_65ba8b9f57b0f720/rdpinput.exe": blob not found
+        SHA-1 message digest of missing blob:
+        5e2bb301a66eea6a80d5287f43842a4c350f7970
+ERROR: If this is a delta WIM, use the --ref argument to specify the WIM(s) on which it is based.
+ERROR: Exiting with error code 55:
+       A file resource needed to complete the operation was missing from the WIM.
+dows-LanguageFeatures-OCR-pt-br-Package-arm64
+  ref ESD: Microsoft-Windows-LanguageFeatures-Speech-pt-br-Package-arm64
+  ref ESD: Microsoft-Windows-LanguageFeatures-TextToSpeech-pt-br-Package-arm64
+  ref ESD: Microsoft-Windows-MediaPlayer-Package-arm64
+  ref ESD: Microsoft-Windows-MediaPlayer-Package-arm64.x86
+  ref ESD: Microsoft-Windows-Notepad-System-FoD-Package-arm64.arm
+  ref ESD: Microsoft-Windows-Notepad-System-FoD-Package-arm64
+  ref ESD: Microsoft-Windows-Notepad-System-FoD-Package-arm64.x86
+  ref ESD: Microsoft-Windows-PowerShell-ISE-FOD-Package-arm64
+  ref ESD: Microsoft-Windows-PowerShell-ISE-FOD-Package-arm64.x86
+  ref ESD: Microsoft-Windows-Printing-PMCPPC-FoD-Package-arm64
+  ref ESD: Microsoft-Windows-StepsRecorder-Package-arm64.arm
+  ref ESD: Microsoft-Windows-StepsRecorder-Package-arm64
+  ref ESD: Microsoft-Windows-StepsRecorder-Package-arm64.x86
+  ref ESD: Microsoft-Windows-TabletPCMath-Package-arm64
+  ref ESD: Microsoft-Windows-WMIC-FoD-Package-arm64.arm
+  ref ESD: Microsoft-Windows-WMIC-FoD-Package-arm64
+  ref ESD: Microsoft-Windows-WMIC-FoD-Package-arm64.x86
+  ref ESD: Microsoft-Windows-Wallpaper-Content-Extended-FoD-Package-arm64
+  ref ESD: Microsoft-Windows-WordPad-FoD-Package-arm64.arm
+  ref ESD: Microsoft-Windows-WordPad-FoD-Package-arm64
+  ref ESD: Microsoft-Windows-WordPad-FoD-Package-arm64.x86
+  ref ESD: OpenSSH-Client-Package-arm64
+  ref ESD: Windows11.0-KB5066133-arm64-NDP481
+  ref ESD: Windows11.0-KB5067019-arm64
+refs criadas: 31
+== [2/5] export imagem 3 (Pro ARM64)

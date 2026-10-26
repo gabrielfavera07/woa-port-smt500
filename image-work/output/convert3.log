@@ -1,0 +1,6 @@
+[ERROR] "/Windows/WinSxS/arm64_microsoft-windows-t..es-inputredirection_31bf3856ad364e35_10.0.22621.1_none_65ba8b9f57b0f720/rdpinput.exe": blob not found
+        SHA-1 message digest of missing blob:
+        5e2bb301a66eea6a80d5287f43842a4c350f7970
+ERROR: If this is a delta WIM, use the --ref argument to specify the WIM(s) on which it is based.
+ERROR: Exiting with error code 55:
+       A file resource needed to complete the operation was missing from the WIM.

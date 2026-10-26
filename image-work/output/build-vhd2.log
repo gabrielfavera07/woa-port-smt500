@@ -1,0 +1,70 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20261024214705
+Nome de Usuário: DESKTOP-IC71EMM\Favera
+Executar como Usuário: DESKTOP-IC71EMM\Favera
+Nome da Configuração: 
+Computador: DESKTOP-IC71EMM (Microsoft Windows NT 10.0.26100.0)
+Aplicativo Host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:\VIBECODING\windroid10\woa-port-smt500\scripts\image\Build-WinVhd2.ps1
+ID do Processo: 10232
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é E:\VIBECODING\windroid10\woa-port-smt500\image-work\output\build-vhd2.log
+== A) estado atual (volumes/VHDs)
+
+DriveLetter FileSystemLabel                Size
+----------- ---------------                ----
+          C                        255153139712
+          S ESP                       623837184
+          D Reservado pelo Sistema     52424704
+          E                        509956775936
+          F Novo volume              2096099328
+
+
+
+Name       Length
+----       ------
+esp.vhd 629146112
+
+
+== B) destacha o que estiver pendurado
+
+Microsoft DiskPart versão 10.0.26100.1150
+
+Copyright (C) Microsoft Corporation.
+No computador: DESKTOP-IC71EMM
+
+DiskPart selecionou com êxito o arquivo de disco virtual.
+
+DiskPart desanexou com êxito o arquivo de disco virtual.
+== C) remove win.vhd antigo e recria (23976MB fixo)
+
+Microsoft DiskPart versão 10.0.26100.1150
+
+Copyright (C) Microsoft Corporation.
+No computador: DESKTOP-IC71EMM
+
+    0 por cento concluído
+
+O DiskPart encontrou um erro: Espaço insuficiente no disco.
+Consulte o Log de Eventos do Sistema para obter mais informações.
+PS>TerminatingError(): "win.vhd nao foi criado (ver saida do diskpart acima)"
+win.vhd nao foi criado (ver saida do diskpart acima)
+win.vhd nao foi criado (ver saida do diskpart acima)
+No E:\VIBECODING\windroid10\woa-port-smt500\scripts\image\Build-WinVhd2.ps1:28 caractere:40
++ ... in.vhd")) { throw "win.vhd nao foi criado (ver saida do diskpart acim ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (win.vhd nao foi...diskpart acima):String) [], RuntimeException
+    + FullyQualifiedErrorId : win.vhd nao foi criado (ver saida do diskpart acima)
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20261024214713
+**********************

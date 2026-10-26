@@ -1,0 +1,5 @@
+create vdisk file="E:\VIBECODING\windroid10\woa-port-smt500\image-work\output\win.vhd" type=fixed maximum=23976
+attach vdisk
+create partition primary
+format fs=ntfs label=WIN quick
+assign letter=W

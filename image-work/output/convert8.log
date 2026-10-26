@@ -1,0 +1,3 @@
+[ERROR] Can't open "temp/*.ESD" read-only: No such file or directory
+ERROR: Exiting with error code 47:
+       Failed to open a file.

@@ -1,0 +1,49 @@
+; sdhc.inf - Miniport SDHCI Qualcomm (SDCC5/sdhci-msm-v5) p/ Galaxy Tab A7 SM-T500
+; Port B2 do projeto woa-port-smt500. Base: sample WDK sd/miniport/sdhc.
+
+[Version]
+Signature="$Windows NT$"
+Class=SDHost
+ClassGUID={a0a588a4-c46f-4b37-b7ea-c82fe89870c6}
+Provider=%ProviderString%
+DriverVer=10/25/2026,1.0.0.0
+CatalogFile=sdhc.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = Disk
+
+[SourceDisksFiles]
+sdhc.sys = 1
+
+[Manufacturer]
+%Gta4l% = Gta4l,NTarm64.10.0
+
+[Gta4l.NTarm64.10.0]
+%SdhcMsm.DeviceDesc% = SDHCMSM_Install, ACPI\QCOM24BF
+%SdhcMsm.DeviceDesc% = SDHCMSM_Install, ACPI\ACPIQCOM24BF
+
+[SDHCMSM_Install]
+CopyFiles = SDHCMSM_Files
+
+[SDHCMSM_Files]
+sdhc.sys
+
+[SDHCMSM_Install.Services]
+AddService = sdhcmsm, 0x00000002, SDHCMSM_Service_Install
+
+[SDHCMSM_Service_Install]
+DisplayName    = %SdhcMsm.SvcDesc%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 0               ; SERVICE_BOOT_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\sdhc.sys
+
+[Strings]
+ProviderString      = "woa-port-smt500"
+Gta4l               = "Samsung Galaxy Tab A7 SM-T500 (gta4l)"
+SdhcMsm.DeviceDesc  = "Qualcomm SDCC5 SD Host Controller (SDHCI-MSM)"
+SdhcMsm.SvcDesc     = "Qualcomm SDCC5 SD Host Controller Miniport"

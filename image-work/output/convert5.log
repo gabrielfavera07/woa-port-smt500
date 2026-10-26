@@ -1,0 +1,24 @@
+[ERROR] "/Windows/WinSxS/arm64_microsoft-windows-a..roblemstepsrecorder_31bf3856ad364e35_10.0.22621.1_none_3c87651a3eb7e7c9/psr.exe": blob not found
+        SHA-1 message digest of missing blob:
+        1b3d92e3f9aa3f33f30b09f54dc7de958577b1e7
+ERROR: If this is a delta WIM, use the --ref argument to specify the WIM(s) on which it is based.
+ERROR: Exiting with error code 55:
+       A file resource needed to complete the operation was missing from the WIM.
+ackage_pt-br-arm64-pt-br.esd
+Microsoft-Windows-EditionPack-Professional-Package.ESD
+Microsoft-Windows-EditionPack-Professional-WOW64-Package.ESD
+Microsoft-Windows-EditionPack-Professional-arm64arm-Package.ESD
+Microsoft-Windows-EditionSpecific-Professional-Package.ESD
+Microsoft-Windows-Foundation-Package.ESD
+Microsoft-Windows-Not-Supported-On-LTSB-Package.ESD
+Microsoft-Windows-Not-Supported-On-LTSB-WOW64-Package.ESD
+Microsoft-Windows-Not-Supported-On-LTSB-arm64arm-Package.ESD
+Microsoft-Windows-RegulatedPackages-Package.ESD
+Microsoft-Windows-RegulatedPackages-WOW64-Package.ESD
+Microsoft-Windows-RegulatedPackages-arm64arm-Package.ESD
+Microsoft-Windows-Required-ShellExperiences-Desktop-Package.ESD
+Microsoft-Windows-Required-ShellExperiences-Desktop-WOW64-Package.ESD
+Microsoft-Windows-Required-ShellExperiences-Desktop-arm64arm-Package.ESD
+Microsoft-Windows-WowPack-CoreARM-arm64arm-Package.ESD
+professional_pt-br.esd
+== [1/4] export imagem 3 (Pro ARM64)

@@ -1,0 +1,9 @@
+prefix=/root/arm-stage
+libdir=/root/arm-stage/lib
+includedir=/root/arm-stage/include
+
+Name: ntfs-3g
+Description: safe libntfs-3g library
+Version: 2022.10.3
+Libs: -L${libdir} -lntfs-3g
+Cflags: -I${includedir}

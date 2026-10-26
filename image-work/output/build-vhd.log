@@ -1,0 +1,45 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20261024214347
+Nome de Usuário: DESKTOP-IC71EMM\Favera
+Executar como Usuário: DESKTOP-IC71EMM\Favera
+Nome da Configuração: 
+Computador: DESKTOP-IC71EMM (Microsoft Windows NT 10.0.26100.0)
+Aplicativo Host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:\VIBECODING\windroid10\woa-port-smt500\scripts\image\Build-WinVhd.ps1
+ID do Processo: 12864
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é E:\VIBECODING\windroid10\woa-port-smt500\image-work\output\build-vhd.log
+== 0/7 limpeza
+== 1/7 criando VHDs (fixos)
+== 2/7 aplicando ESD (index 3 = Pro ARM64) -- alguns minutos
+
+Ferramenta de Gerenciamento e Manutenção de Imagens de Implantação
+Versão: 10.0.26100.5074
+
+
+Erro: 3
+
+O sistema não pode encontrar o caminho especificado.
+
+O arquivo de log do DISM pode ser localizado em C:\WINDOWS\Logs\DISM\dism.log
+PS>TerminatingError(): "DISM apply falhou (3)"
+DISM apply falhou (3)
+DISM apply falhou (3)
+No E:\VIBECODING\windroid10\woa-port-smt500\scripts\image\Build-WinVhd.ps1:51 caractere:28
++ ... f ($LASTEXITCODE -ne 0) { throw "DISM apply falhou ($LASTEXITCODE)" }
++                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (DISM apply falhou (3):String) [], RuntimeException
+    + FullyQualifiedErrorId : DISM apply falhou (3)
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20261024214354
+**********************

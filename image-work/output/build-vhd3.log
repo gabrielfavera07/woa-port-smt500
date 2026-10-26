@@ -1,0 +1,96 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20261024215616
+Nome de Usuário: DESKTOP-IC71EMM\Favera
+Executar como Usuário: DESKTOP-IC71EMM\Favera
+Nome da Configuração: 
+Computador: DESKTOP-IC71EMM (Microsoft Windows NT 10.0.26100.0)
+Aplicativo Host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:\VIBECODING\windroid10\woa-port-smt500\scripts\image\Build-WinVhd3.ps1
+ID do Processo: 2836
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é E:\VIBECODING\windroid10\woa-port-smt500\image-work\output\build-vhd3.log
+== A) destacha pendurados
+
+Microsoft DiskPart versão 10.0.26100.1150
+
+Copyright (C) Microsoft Corporation.
+No computador: DESKTOP-IC71EMM
+
+DiskPart selecionou com êxito o arquivo de disco virtual.
+
+Erro do Serviço de Disco Virtual:
+O disco virtual já está desanexado.
+== B) cria win.vhd dinamico 16GB em C:
+
+Microsoft DiskPart versão 10.0.26100.1150
+
+Copyright (C) Microsoft Corporation.
+No computador: DESKTOP-IC71EMM
+
+  100 por cento concluído
+
+O DiskPart criou com êxito o arquivo de disco virtual.
+
+DiskPart selecionou com êxito o arquivo de disco virtual.
+
+  100 por cento concluído
+
+DiskPart anexou com êxito o arquivo de disco virtual.
+
+DiskPart criou com êxito a partição especificada.
+
+  100 por cento concluído
+
+O DiskPart formatou com êxito o volume.
+
+DiskPart atribuiu com êxito a letra de unidade ou o ponto de montagem.
+== C) anexa esp.vhd em S:
+
+Microsoft DiskPart versão 10.0.26100.1150
+
+Copyright (C) Microsoft Corporation.
+No computador: DESKTOP-IC71EMM
+
+DiskPart selecionou com êxito o arquivo de disco virtual.
+
+  100 por cento concluído
+
+DiskPart anexou com êxito o arquivo de disco virtual.
+
+1 é a partição selecionada.
+
+DiskPart atribuiu com êxito a letra de unidade ou o ponto de montagem.
+== D) aplica ESD index 3 (~10 min)
+
+Ferramenta de Gerenciamento e Manutenção de Imagens de Implantação
+Versão: 10.0.26100.5074
+
+Aplicando imagem
+[===========================96.0%=======================   ]
+
+Erro: 1812
+
+O arquivo de imagem não continha uma seção de recursos.
+
+O arquivo de log do DISM pode ser localizado em C:\WINDOWS\Logs\DISM\dism.log
+PS>TerminatingError(): "DISM apply falhou (1812)"
+DISM apply falhou (1812)
+DISM apply falhou (1812)
+No E:\VIBECODING\windroid10\woa-port-smt500\scripts\image\Build-WinVhd3.ps1:46 caractere:28
++ ... f ($LASTEXITCODE -ne 0) { throw "DISM apply falhou ($LASTEXITCODE)" }
++                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (DISM apply falhou (1812):String) [], RuntimeException
+    + FullyQualifiedErrorId : DISM apply falhou (1812)
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20261024215827
+**********************
