@@ -126,3 +126,27 @@ documentado). 4 subagentes de pesquisa disparados (UEFI/edk2, drivers, instalaç
   + deploy-b2.sh (mkntfs+apply+BCD). install-w-drv.wim (3.66GB) e BCD já no C:.
 - EWDK_ni_release_svc_prod1_22621_230929-1800.iso (15.9GB, fwlink 2249942) baixando em
   E:\VIBECODING\ewdk-22621.iso (curl detached com continue-at; morreu 2x, retomou).
+
+## 26/out (madrugada) — BISSEÇÃO DEFINITIVA: kernel morre CEDO, storage inocentado
+Cadeia de testes B2 (loop rápido ~10min: push .sys 14KB → wimlib update no WIM no device
+→ mkntfs+apply → BCD → reboot):
+- B2 teste 1: 0xc0000428 (sdhc.sys SEM assinatura) → driver CHEGOU ao caminho de boot ✓
+- B2 teste 2: assinado (signtool /a /n WOA-Test, cert New-SelfSignedCertificate
+  CodeSigningCert) → passou 0428, spinner congelou. BUG achado: offset v5 CORE_* é da
+  base HC (0x0; sdhci_msm_v5_variant_readl = ioaddr+offset) — v1 do driver escrevia em
+  +0x1000 (CQHCI!) e nunca ackava o pwrctl real 0x4744240.
+- B2 teste 3 (offset 0x0 correto): spinner congelou igual.
+- BISECT A (driver com return STATUS_UNSUCCESSFUL deliberado na init — pragma
+  warning(disable:4702) pro C2220): spinner congelou IGUAL → hang NÃO é no driver.
+- v9 firmware: PwrCtlQuiesceDxe (gta4lPkg/PwrCtlQuiesceDxe — máscara PWRCTL_MASK=0 +
+  drena STATUS/CLEAR/CTL no ExitBootServices) → spinner congelou igual.
+- **OBSERVAÇÃO-CHAVE DO USUÁRIO: spinner roda ~1/2 segundo e congela** → kernel morre
+  ANTES de qualquer init de storage. TEORIA STORM PWRCTL + driver B2: DESCARTADOS como
+  causa primária.
+- v10 firmware: SDC1 _STA=0 (device oculto do SO, DSDT linha ~36 "SDC1 BISECT STA0") —
+  flashada e reboot enviados. RESULTADO PENDENTE:
+  - congela igual → storage 100% inocentado; frente nova: GTDT/timer, GIC, ACPI cedo
+  - 0x7B → kernel saudável; problema É o SDC1/storage
+Infra: WSL Ubuntu ressuscitado via wsl --system -d Ubuntu -- lsblk (o --mount --vhd
+--bare replayou o journal do ext4; getpwnam voltou). gh auth: gabrielfavera07 OK.
+Repo: github.com/gabrielfavera07/woa-port-smt500 (commit inicial 26/out, main).
